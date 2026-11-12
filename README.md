@@ -5,12 +5,11 @@
 **Course Code:** CAP2012  
 **Course Title:** Data Structures  
 **Section:** D1P2505  
-**Group:** Group 1 and Group 2  
-**Total Marks:** 50 (25 Marks Coding & GitHub + 25 Marks Viva / Code Evaluation)
+**Group:** Group 2  
 
 ---
 
-## 📌 Repository Overview
+##  Repository Overview
 
 This repository contains full C++ solutions to the 16 assigned LeetCode problems covering **Units I to IV** (Basic Concepts, Arrays, Linked Lists, Stacks & Queues). Each solution includes:
 1. Complete, standard LeetCode class implementation.
@@ -21,7 +20,7 @@ This repository contains full C++ solutions to the 16 assigned LeetCode problems
 
 ---
 
-## 📂 Repository Directory Structure
+##  Repository Directory Structure
 
 ```
 CAP2012_CA3_LeetCode_12513808/
@@ -49,7 +48,7 @@ CAP2012_CA3_LeetCode_12513808/
 
 ---
 
-## 📋 Assigned LeetCode Questions Summary Table
+##  Assigned LeetCode Questions Summary Table
 
 | S.No | LeetCode # | Problem Name | Level | Unit | Data Structure / Algorithm | Time Complexity | Space Complexity |
 |:---:|:---:|:---|:---:|:---:|:---|:---:|:---:|
@@ -72,7 +71,7 @@ CAP2012_CA3_LeetCode_12513808/
 
 ---
 
-## 🛠️ How to Compile and Run Locally
+## How to Compile and Run Locally
 
 All source files are self-contained C++ programs. You can compile and test any solution using `g++`:
 
@@ -92,23 +91,4 @@ g++ -std=c++17 Hard/15_LC023_MergeKSortedLists_Hard.cpp -o run
 
 ---
 
-## 🎓 Viva Preparation & Concept Summary
 
-### Unit I: Basic Concepts & Loops
-- **Digit Extraction:** Using `% 10` extracts the least significant digit, and `/ 10` drops it. Time complexity is proportional to the number of digits $O(\log_{10} n)$.
-
-### Unit II: Arrays & Two Pointers
-- **In-place Operations:** Avoid allocating extra arrays by overwriting or swapping elements from the rear or using slow/fast pointers.
-- **Array Rotation via Reversal:** Reversing the whole array, then the first $k$ elements, then the remaining $n - k$ elements rotates the array in $O(n)$ time and $O(1)$ space.
-
-### Unit III: Linked Lists
-- **Pointer Manipulation:** When reversing links, always preserve `curr->next` before modifying it (`ListNode* nextNode = curr->next`).
-- **Dummy Node Technique:** Using a dummy node simplifies edge cases where the head of the list needs to be updated or removed (e.g., LC 92, LC 23).
-- **Circular Re-linking:** Connecting the tail to the head simplifies list rotations by turning the problem into finding the cutoff position $(n - k \pmod n)$.
-- **Merging k Lists:** Utilizing a min-heap allows retrieving the next smallest element across all $k$ heads in $O(\log k)$ time, yielding an optimal $O(N \log k)$ runtime.
-
-### Unit IV: Stacks, Queues & Recursion
-- **Stack (LIFO):** Essential for nested structures (parentheses matching, expression evaluation) and tracking historical minima (Min Stack).
-- **Queue using Stacks:** Achieves amortized $O(1)$ operations by transferring elements to `outStack` only when needed, preserving order reversal.
-- **Circular Queue (Ring Buffer):** Overcomes the memory-wasting limitation of linear array queues by wrapping indices with `(index + 1) % capacity`.
-- **Recursion vs Dynamic Programming:** Pure recursion in Fibonacci computes duplicate subtrees ($O(2^n)$); iterative tabulation or memoization reduces this to $O(n)$.
